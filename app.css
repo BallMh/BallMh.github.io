@@ -8,6 +8,10 @@
     position: relative;
 }
 
+#main-card {
+    margin-top: 70px;
+}
+
 .heading {
     font-size: 36px;
 }
@@ -39,7 +43,7 @@
 }
 
 #item-0 {
-    flex-grow: 24;
+    flex-grow: 50;
 }
 
 #item-1 {

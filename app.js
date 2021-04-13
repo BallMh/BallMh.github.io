@@ -1,6 +1,7 @@
 let resultsInfo = document.getElementById("resultsInfo");
 let numOfResults = document.getElementById("numOfResults");
 let copyBtn = document.getElementById("copyBtn");
+let kofi_btn = document.getElementById("ko-fi_btn")
 let separator = "";
 
 document.getElementById("calcBtn").addEventListener("click", calculate);
@@ -12,6 +13,13 @@ document.getElementById("IncrementInput").defaultValue = 1;
 document.getElementById("PaddingInput").defaultValue = 0;
 document.getElementById("NumOfPaddingInput").defaultValue = 3;
 document.getElementById("placeholderInput").defaultValue = "Extra";
+
+function reveal() {
+  kofi_btn.style.display = "inline-block";
+  setTimeout(() => {
+    kofi_btn.style.display = "none"
+  }, 3000);
+}
 
 function resultsDisplay() {
   resultsInfo.style.display = "none";
