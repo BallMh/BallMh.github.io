@@ -1,7 +1,7 @@
 let resultsInfo = document.getElementById("resultsInfo");
 let numOfResults = document.getElementById("numOfResults");
 let copyBtn = document.getElementById("copyBtn");
-let kofi_btn = document.getElementById("ko-fi_btn")
+let kofi_btn = document.getElementById("ko-fi_btn");
 let separator = "";
 
 document.getElementById("calcBtn").addEventListener("click", calculate);
@@ -43,18 +43,18 @@ function error(startingNumber, documentsWanted, upCount, incrementAmount) {
     isNaN(upCount) ||
     isNaN(incrementAmount)
   ) {
-    hideResults()
+    hideResults();
     resultsArea.value = null;
     alert("Please fill in all required fields!");
   } else if (incrementAmount <= 0 || documentsWanted <= 0 || upCount <= 0) {
-    hideResults()
+    hideResults();
     resultsArea.value = null;
     alert("can't be 0 or Negative!");
   } else if (startingNumber < 0) {
-    hideResults()
+    hideResults();
     resultsArea.value = null;
     alert("Starting Number can't be Negative!");
-}
+  }
 }
 
 function removeFirstSpace() {
@@ -67,7 +67,6 @@ function removeLastSpace() {
   cleaned = cleaned.replace(/\s$/, "");
   resultsArea.value = cleaned;
 }
-
 
 function copyFunction() {
   if (
@@ -160,7 +159,6 @@ function CountingFirstPosS(numberOfSheets, incrementAmount) {
   return valuesInFirstPos;
 }
 
-
 function calculate(e) {
   //Input values
   const starting = document.getElementById("firstNumberInput");
@@ -222,41 +220,47 @@ function calculate(e) {
       for (let p = 0; p < cleaned.length; p++) {
         if (cleaned[p] !== placeholder || isNaN(placeholder) !== true) {
           cleanedString +=
-            prefix + cleaned[p].toString().padStart(NumOfPadding, Padding) + suffix + separator;
+            prefix +
+            cleaned[p].toString().padStart(NumOfPadding, Padding) +
+            suffix +
+            separator;
         } else if (isNaN(placeholder) == true) {
           cleanedString += cleaned[p].toString() + separator;
         }
       }
-      if (startingString) {        
+      if (startingString) {
         let resultsWillBe = startingString + separator + cleanedString;
-        let results = resultsWillBe.substring(0,resultsWillBe.length-1)
+        let results = resultsWillBe.substring(0, resultsWillBe.length - 1);
         resultsArea.value = results;
       } else {
         let resultsWillBe = startingString + separator + cleanedString;
-        let results = resultsWillBe.substring(1, resultsWillBe.length-1)
+        let results = resultsWillBe.substring(1, resultsWillBe.length - 1);
         resultsArea.value = results;
       }
     } else {
       for (let p = 0; p < reversed.length; p++) {
         if (reversed[p] !== placeholder || isNaN(placeholder) !== true) {
           reversedString +=
-          prefix +  reversed[p].toString().padStart(NumOfPadding, Padding) + suffix + separator;
+            prefix +
+            reversed[p].toString().padStart(NumOfPadding, Padding) +
+            suffix +
+            separator;
         } else if (isNaN(placeholder) == true) {
           reversedString += reversed[p].toString() + separator;
         }
       }
-      if (startingString) {        
+      if (startingString) {
         let resultsWillBe = startingString + separator + reversedString;
-        let results = resultsWillBe.substring(0,resultsWillBe.length-1)
+        let results = resultsWillBe.substring(0, resultsWillBe.length - 1);
         resultsArea.value = results;
       } else {
         let resultsWillBe = startingString + separator + reversedString;
-        let results = resultsWillBe.substring(1, resultsWillBe.length-1)
+        let results = resultsWillBe.substring(1, resultsWillBe.length - 1);
         resultsArea.value = results;
       }
     }
-  } 
-  
+  }
+
   reverseArray(cleaned);
   separatorChoser();
   write();
@@ -265,6 +269,6 @@ function calculate(e) {
   error(startingNumber, documentsWanted, upCount, incrementAmount);
   removeFirstSpace();
   removeLastSpace();
-  
+
   e.preventDefault();
 }
