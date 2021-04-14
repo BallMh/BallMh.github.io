@@ -6,6 +6,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+  <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
@@ -16,11 +18,25 @@
   <div id="wrapper">
   <header id = "header">
         <div id ="nav-container">
-          <div class="nav-item" id="item-2">  <a href="https://ko-fi.com/T6T149IGN" onmouseenter="reveal()">+</a>  <a href='https://ko-fi.com/T6T149IGN' target='_blank'><img id="ko-fi_btn" height='36' style='border:0px;height:36px; display: none;' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a></div>
+          <div class="nav-item" id="item-2"> 
+            <ul id="MiniLeftNav">
+              <li>
+                  <a class="navtext" href="https://ko-fi.com/T6T149IGN"><i class="lni lni-plus"></i> 
+                    <span><i class="lni lni-lg lni-heart"></i> Buy me a coffee </i><i class="lni lni-lg lni-coffee-cup"></i></span></a>
+              </li>
+          </ul> 
+            <!-- <a id = "nav_ko-fi" href="#">
+              <i class="lni lni-plus"></i>
+              <a href='https://ko-fi.com/T6T149IGN' target='_blank'>
+                <span id="ko-fi_btn">***</span>
+                <img id="ko-fi_btn" height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+              </a>
+            </a>   -->
+          </div>
           <div class="nav-item" id="item-0"></div>
           <!-- <div class="nav-item" id="item-1"><a href="#">#</a></div>
           <div class="nav-item" id="item-2"><a href="#">#</a></div> -->
-          <div class="nav-item" id="item-3"><a href="mailto:mail.balla.mihaly@gmail.com">Contact me</a></div>
+          <div class="nav-item" id="item-3"><a href="mailto:mail.balla.mihaly@gmail.com"><i class="lni lni-lg lni-envelope"></i></a></div>
           <div class="nav-item" id="item-00"></div>
         </div>
   </header>
@@ -43,9 +59,9 @@
                             <small class="text-muted" class="text-muted">Write this infront</small class="text-muted">
                           </div>
                           <div class="form-group col">
-                            <label for="firstNumberInput"> Starting Number</label>
+                            <label for="firstNumberInput"> First Number</label>
                             <input class="form-control form-control-sm" type="number" id="firstNumberInput" required/>
-                            <small class="text-muted" class="text-muted">First Number</small class="text-muted">
+                            <small class="text-muted" class="text-muted">Starting Number</small class="text-muted">
                           </div>
                         </div>
                         <div class="row">

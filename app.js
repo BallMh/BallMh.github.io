@@ -14,13 +14,6 @@ document.getElementById("PaddingInput").defaultValue = 0;
 document.getElementById("NumOfPaddingInput").defaultValue = 3;
 document.getElementById("placeholderInput").defaultValue = "Extra";
 
-function reveal() {
-  kofi_btn.style.display = "inline-block";
-  setTimeout(() => {
-    kofi_btn.style.display = "none"
-  }, 3000);
-}
-
 function resultsDisplay() {
   resultsInfo.style.display = "none";
   numOfResults.style.display = "inline-block";
