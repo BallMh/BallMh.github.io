@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="app.css">
+  <title>Numbering Calculator</title>
+</head>
+<body >
+  <div id="wrapper">
+  <header id = "header">
+        <div id ="nav-container">
+          <div class="nav-item" id="item-2"> 
+            <ul id="MiniLeftNav">
+              <li>
+                  <a class="navtext" href="https://ko-fi.com/T6T149IGN"><i class="lni lni-plus"></i> 
+                    <span><i class="lni lni-lg lni-heart"></i> Buy me a coffee </i><i class="lni lni-lg lni-coffee-cup"></i></span></a>
+              </li>
+          </ul> 
+          </div>
+          <div class="nav-item" id="item-0"></div>
+          <!-- <div class="nav-item" id="item-1"><a href="#">#</a></div>
+          <div class="nav-item" id="item-2"><a href="#">#</a></div> -->
+          <div class="nav-item" id="item-3"><a href="mailto:mail.balla.mihaly@gmail.com"><i class="lni lni-lg lni-envelope"></i></a></div>
+          <div class="nav-item" id="item-00"></div>
+        </div>
+  </header>
+  <div class="container" >
+    <div class="form-row">
+      <div class="col-1"></div>
+      <div class="col-10">
+            <div id = "main-card" class="card card-body text-center">
+              <div class="form-row">
+                <div class="col">
+                  <form id="form">
+                    <h1 class="heading display-4 mb-4">Numbering Calculator</h1>
+                    <div class="form-row">
+                      <div class="col-md-2"></div>
+                      <div class="col-md-8">
+                        <div class="row">
+                          <div class="form-group col">
+                            <label for="firstStringInput"> Initial String</label>
+                            <input class="form-control form-control-sm" type="string" id="firstStringInput"/>
+                            <small class="text-muted" class="text-muted">Write this infront</small class="text-muted">
+                          </div>
+                          <div class="form-group col">
+                            <label for="firstNumberInput"> First Number</label>
+                            <input class="form-control form-control-sm" type="number" id="firstNumberInput" required/>
+                            <small class="text-muted" class="text-muted">Starting Number</small class="text-muted">
+                          </div>
+                        </div>
+                        <div class="row">
+
+                          <div class="form-group col">
+                            <label for="numOfDocsInput"> Length of Sequence </label>
+                            <input class="form-control form-control-sm" type="number" id="numOfDocsInput" required/>
+                            <small class="text-muted">Number of Docs</small class="text-muted">
+                          </div>
+                          <div class="form-group col">
+                            <label for="howManyUpInput"> Documents per Sheet </label>
+                            <input class="form-control form-control-sm" type="number" id="howManyUpInput" required/>
+                            <small class="text-muted">How many Up?</small class="text-muted">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col">
+                            <label for="IncrementInput"> Increment by</label>
+                            <input class="form-control form-control-sm" type="number" id="IncrementInput" required/>
+                          </div>
+                          <div class="form-group col">
+                            <label> Separator </label>
+                            <select class="form-control form-control-sm" id="separatorChoice">
+                              <option value="New Line">New Line</option>
+                              <option value="Space">Space</option>
+                              <option value="Comma">Comma</option>
+                              <option value="Semicolon">Semicolon</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="row">
+                            <div class="form-group col" >
+                              <label for="PrefixInput"> Prefix </label>
+                              <input class="form-control form-control-sm" type="string" id="PrefixInput" />
+                            </div>
+                            <div class="form-group col">
+                              <label for="SuffixInput"> Suffix </label>
+                              <input class="form-control form-control-sm" type="string" id="SuffixInput" />
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="form-group col">
+                              <label for="PaddingInput"> Leading <br/> Characters </label>
+                              <input class="form-control form-control-sm" type="string" id="PaddingInput" />
+                              <small class="text-muted">Uses these characters for padding</small>
+                            </div>
+                            <div class="form-group col">
+                              <label for="NumOfPaddingInput">Min. Number <br/> of Digits </label>
+                              <input class="form-control form-control-sm" type="number" id="NumOfPaddingInput" />
+                              <small class="text-muted">Changes the amount of Padding</small>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                    </div>
+                    <div class="form-group">
+                      <label for="radioDiv">Count</label>
+                      <div id="radioDiv">
+                        <div class="form-check" style="display: inline-block;">
+                          <input class="form-check-input" type="radio" name="radios" id="up" checked />
+                          <label class="form-check-label" for="up">Up</label>
+                        </div>
+                        <div class="form-check"style="display: inline-block;">
+                          <input class="form-check-input" type="radio" name="radios" id="down" />
+                          <label class="form-check-label" for="down">Down</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="collateCheckBox"
+                          onclick="collateDisplay()" />
+                        <label class="form-check-label" for="collateCheckBox">
+                          Increase the number of Sheets
+                      </div>
+                      <div id="collateParentDiv" style="display: none">
+                        <div id="collateSecondDisplay" style="display: block">
+                          <small class="text-muted">By increasing this value more Waste will be produced!</small><br>
+                          <input class="form-control form-control-sm" type="number" id="NumOfCollateInput" />
+                        </div>
+                      </div>
+                    </div>   
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                          onclick="placeholderDisplay()" />
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Use Placeholder for Extra numbers
+                      </div>
+                      <div id="placeholderParentDiv" style="display: none">
+                        <div id="placeholderSecondDisplay" style="display: block">
+                          <label> Placeholder </label>
+                          <input class="form-control form-control-sm" type="string" id="placeholderInput" />
+                        </div>
+                      </div>
+                    </div>   
+                   </form>
+                </div>
+                <div class="col">
+                  <div class="card card-body text-center mt-5" id="resultsCard">
+                    <div id="resultsInfo" style="display: block" class="mb-2">
+                      Your Results will show up inside this box:
+                    </div>
+                    <div id="numOfResults" style="display: none" class="mb-2">
+                      Numbers Generated: <span id="showNumbers"></span><br />
+                      Extras: <span id="showExtras"></span><br />
+                      <!-- Number of Sheets: <span id="showSheets"></span><br /> -->
+                    </div>
+                    <div id="resultsContainer" style="display: block">
+                      <textarea class="form-control form-control-sm" name="results" id="resultsArea" cols="30"
+                        rows="26"></textarea>
+                    </div>                    
+                  </div>
+                </div>
+              </div>
+              <div id="form-btns-footer" class="form-row">
+                <div class="col">
+                  <div class="form-goup">
+                    <input type="submit" id="calcBtn" class="btn btn-primary" value="calculate" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-goup">
+                    <input type="submit" id="copyBtn" class="btn btn-secondary" value="copy results" style="display: none"
+                      onclick="copyFunction(); return false;" />
+                  </div>
+                </div>  
+              </div>           
+            </div> 
+            <div class="row">
+              <div class="col">
+                <div id="infoDiv"><a href="#about">What is This?</a></div>                
+              </div>
+            </div>
+          </div>
+          <div class="col-1"></div>
+        </div>
+        <section class="row" id = "about" >
+          <div class="col align-self-center">
+            <div class="scrollBack row">
+              <div class="col"></div>
+              <div class="col"></div>
+              <div class="col" id = "scrollBackDiv">
+                <a href="#nav-container" id="scrollBackLink" >back</a>
+              </div>
+            </div>
+            <article >
+              This calculator generates number sequences for "cut and stack"-style imposition layouts.
+              <strong id="disclaimer">This is just my personal project, use it at your own risk!</strong>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  <script src="app_v2.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+  </script>
+  
+
+</body>
+
+</html>
