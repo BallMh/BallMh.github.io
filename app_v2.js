@@ -4,13 +4,14 @@ let copyBtn = document.getElementById("copyBtn");
 let kofi_btn = document.getElementById("ko-fi_btn");
 let separator = "";
 let collateCheckBox = document.getElementById("collateCheckBox");
+let collateField = document.getElementById("NumOfCollateInput");
 
 document.getElementById("calcBtn").addEventListener("click", calculate);
 document.getElementById("firstNumberInput").defaultValue = 1;
 document.getElementById("firstStringInput").defaultValue = "Numbers";
 document.getElementById("numOfDocsInput").defaultValue = 90;
 document.getElementById("howManyUpInput").defaultValue = 12;
-document.getElementById("NumOfCollateInput").defaultValue = 8;
+// document.getElementById("NumOfCollateInput").defaultValue = 8;
 document.getElementById("IncrementInput").defaultValue = 1;
 document.getElementById("PaddingInput").defaultValue = 0;
 document.getElementById("NumOfPaddingInput").defaultValue = 3;
@@ -45,6 +46,13 @@ function collateDisplay() {
   } else {
     collateParentDiv.style.display = "inline-block";
   }
+}
+
+let docsForColl = document.getElementById("numOfDocsInput");
+let upForColl = document.getElementById("howManyUpInput");
+
+function collateFill() {
+  collateField.value = Math.ceil(docsForColl.value/upForColl.value);
 }
 
 function error(startingNumber, documentsWanted, upCount, incrementAmount, collateCount) {
@@ -183,7 +191,6 @@ function CountingFirstPosS(numberOfSheets, incrementAmount) {
   }
   return valuesInFirstPos;
 }
-
 
 function calculate(e) {
     //Input values
