@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link rel="stylesheet" href="app.css">
-  <title>Numbering Calculator</title>
+  <title>Cut and Stack Numbering Calculator</title>
 </head>
 <body >
   <div id="wrapper">
@@ -41,7 +41,7 @@
               <div class="form-row">
                 <div class="col">
                   <form id="form">
-                    <h1 class="heading display-4 mb-4">Numbering Calculator</h1>
+                    <h1 class="heading display-4 mb-4">Cut & Stack Numbering Calculator</h1>
                     <div class="form-row">
                       <div class="col-md-2"></div>
                       <div class="col-md-8">
@@ -62,7 +62,7 @@
                           <div class="form-group col">
                             <label for="numOfDocsInput"> Length of Sequence </label>
                             <input class="form-control form-control-sm" type="number" id="numOfDocsInput" required/>
-                            <small class="text-muted">Number of Docs</small class="text-muted">
+                            <small class="text-muted">Number of Documents</small class="text-muted">
                           </div>
                           <div class="form-group col">
                             <label for="howManyUpInput"> Documents per Sheet </label>
@@ -103,9 +103,9 @@
                               <small class="text-muted">Uses these characters for padding</small>
                             </div>
                             <div class="form-group col">
-                              <label for="NumOfPaddingInput">Min. Number <br/> of Digits </label>
+                              <label for="NumOfPaddingInput">Digits in each Number</label>
                               <input class="form-control form-control-sm" type="number" id="NumOfPaddingInput" />
-                              <small class="text-muted">Changes the amount of Padding</small>
+                              <small class="text-muted">Affects the amount of padding</small>
                             </div>
                           </div>
                       </div>
@@ -204,7 +204,7 @@
               </div>
             </div>
             <article >
-              This calculator generates number sequences for "cut and stack"-style imposition layouts.
+              This calculator generates number sequences for digitally printed layouts intended for the "cut and stack" - type cutting method.
               <strong id="disclaimer">This is just my personal project, use it at your own risk!</strong>
             </article>
           </div>
