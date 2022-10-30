@@ -251,8 +251,10 @@ function calculate(e) {
 
   function resultsInfo() {
     let showNumbers = cleaned.length;
+    let showSheets = numberOfSheets;
     let showExtras = cleaned.length - documentsWanted;
     document.getElementById("showNumbers").innerHTML = showNumbers;
+    document.getElementById("showSheets").innerHTML = showSheets;
     document.getElementById("showExtras").innerHTML = showExtras;
   }
 
