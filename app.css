@@ -1,116 +1,117 @@
 * {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
-}
-
-#wrapper {
-  position: relative;
-}
-
-#main-card {
-  margin-top: 80px;
-}
-
-.heading {
-  font-size: 36px;
-}
-
-#contactDiv {
-  text-align: right;
-}
-
-#infoDiv {
-  text-align: left;
-}
-
-#about {
-  height: 100vh;
-  text-align: center;
-}
-
-#disclaimer {
-  display: block;
-  margin-top: 20px;
-}
-
-#scrollBack {
-  text-align: right;
-}
-
-#scrollBackDiv {
-  text-align: right;
-}
-
-#item-0 {
-  flex-grow: 50;
-}
-
-#item-1 {
-  flex-grow: 1;
-}
-#item-2 {
-  flex-grow: 1;
-}
-#item-3 {
-  flex-grow: 1;
-}
-#item-00 {
-  flex-grow: 1;
-}
-
-#header {
-  z-index: 2;
-  position: fixed;
-  top: 0;
-  background-color: white;
-}
-
-.container {
-  z-index: 1;
-}
-
-#nav-container {
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
-}
-
-.nav-item {
-  padding: 10px;
-}
-
-#MiniLeftNav li a {
-  border: solid 1px #fff;
-  display: block;
-  padding: 7px;
-  position: relative;
-}
-#MiniLeftNav span {
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 0;
-
-  /* CSS3 Transition: */
-  -webkit-transition: 0.5s;
-
-  /* Future proofing (these do not work yet): */
-  -moz-transition: 0.5s;
-  transition: 0.5s;
-}
-#MiniLeftNav a:hover span {
-  width: auto;
-  padding: 0 30px;
-  overflow: visible;
-}
-#MiniLeftNav a:hover {
-  text-decoration: none;
-}
-#MiniLeftNav a span {
-  background-color: #fff;
-  color: #3d4f0c;
-}
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+  
+  #wrapper {
+    position: relative;
+  }
+  
+  #main-card {
+    margin-top: 80px;
+  }
+  
+  .heading {
+    font-size: 36px;
+  }
+  
+  #contactDiv {
+    text-align: right;
+  }
+  
+  #infoDiv {
+    text-align: left;
+  }
+  
+  #about {
+    height: 100vh;
+    text-align: center;
+  }
+  
+  #disclaimer {
+    display: block;
+    margin-top: 20px;
+  }
+  
+  #scrollBack {
+    text-align: right;
+  }
+  
+  #scrollBackDiv {
+    text-align: right;
+  }
+  
+  #item-0 {
+    flex-grow: 50;
+  }
+  
+  #item-1 {
+    flex-grow: 1;
+  }
+  #item-2 {
+    flex-grow: 1;
+  }
+  #item-3 {
+    flex-grow: 1;
+  }
+  #item-00 {
+    flex-grow: 1;
+  }
+  
+  #header {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    background-color: white;
+  }
+  
+  .container {
+    z-index: 1;
+  }
+  
+  #nav-container {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+  }
+  
+  .nav-item {
+    padding: 10px;
+  }
+  
+  #MiniLeftNav li a {
+    border: solid 1px #fff;
+    display: block;
+    padding: 7px;
+    position: relative;
+  }
+  #MiniLeftNav span {
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 0;
+  
+    /* CSS3 Transition: */
+    -webkit-transition: 0.5s;
+  
+    /* Future proofing (these do not work yet): */
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #MiniLeftNav a:hover span {
+    width: auto;
+    padding: 0 30px;
+    overflow: visible;
+  }
+  #MiniLeftNav a:hover {
+    text-decoration: none;
+  }
+  #MiniLeftNav a span {
+    background-color: #fff;
+    color: #3d4f0c;
+  }
+  
